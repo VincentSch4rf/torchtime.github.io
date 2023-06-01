@@ -1,0 +1,63 @@
+/* Use white for logo background. */
+.wy-side-nav-search {
+	background-color: #fff;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+/* Justify the text. */
+
+.section #basic-2-flip-flop-synchronizer {
+	text-align:justify;
+}
+
+.wy-nav-side {
+	background-color: #f3f4f7;
+	color: #262626;
+	overflow: scroll;
+}
+
+a:link,
+a:visited,
+a:hover {
+  color: #e44c2c;
+}
+
+.wy-menu-vertical a {
+	color: #6c6c6d;
+}
+
+.wy-menu-vertical li.current > a:hover, .wy-menu-vertical li.on a:hover {
+	background: #d6d6d6;
+	cursor: pointer;
+}
+
+.wy-menu-vertical a:hover {
+	background-color: #d6d6d6;
+	cursor: pointer;
+}
+
+.wy-menu-vertical li.current {
+	background: #f3f4f7;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+	display: block;
+	color: #262626;
+}
+
+.wy-menu-vertical a:hover button.toctree-expand {
+	color: #262626;
+}
+
+/*.wy-menu-vertical li.current a {*/
+/*	border-right: none;*/
+/*}*/
+
+.rst-content code.xref, .rst-content tt.xref, a .rst-content code, a .rst-content tt {
+	font-weight: 700;
+	color: #e44c2c;
+	overflow-wrap: normal;
+}
