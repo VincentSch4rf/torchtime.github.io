@@ -1,0 +1,45 @@
+# Site settings
+title: "PyTorch Time Website"
+author: "Vincent Sch4rf"
+default_author: Vincent Sch4rf
+description: "PyTorch-based Time Series Classification Framework"
+latest_version: 0.1.0
+timezone: Europe/Berlin
+url: "https://www.pytorchtime.com"
+baseurl: ""
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-redirect-from
+  - jekyll-autoprefixer
+  - jekyll-feed
+exclude:
+  [
+    README.md,
+  ]
+include:
+  [
+    _static,
+    _images,
+    _modules,
+    _sources,
+  ]
+github: [metadata]
+external_urls:
+  github: https://github.com/VincentSch4rf/torchtime
+  github_issues: https://github.com/VincentSch4rf/torchtime/issues
+  contributing: https://github.com/VincentSch4rf/torchtime/blob/main/CONTRIBUTING.md
+livereload: true
+markdown: kramdown
+highlighter: rouge
+
+pagination:
+  enabled: true
+  per_page: 8
+  permalink: "/:num/"
+  title: ":title | :num of :max"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
