@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TimeSeriesDataset &mdash; Torchtime nightly documentation</title>
+  <title>Example gallery &mdash; Torchtime nightly documentation</title>
   
 
   
@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PandasDataset" href="torchtime.datasets.PandasDataset.html" />
-    <link rel="prev" title="UCR" href="torchtime.datasets.UCR.html" />
+    <link rel="next" title="torchtime" href="../torchtime.html" />
+    <link rel="prev" title="Get Started" href="../get_started.html" />
   <!-- Google Analytics -->
   
   <!-- End Google Analytics -->
@@ -163,14 +163,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">Get Started</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Example gallery</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example gallery</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python API Reference</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../torchtime.html">torchtime</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../io.html">torchtime.io</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">torchtime.datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">torchtime.datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../transforms.html">torchtime.transforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../models.html">torchtime.models</a></li>
 </ul>
@@ -223,15 +223,13 @@
       </li>
 
         
-          <li><a href="../datasets.html">torchtime.datasets</a> &gt;</li>
-        
-      <li>TimeSeriesDataset</li>
+      <li>Example gallery</li>
     
     
       <li class="pytorch-breadcrumbs-aside">
         
             
-            <a href="../_sources/generated/torchtime.datasets.TimeSeriesDataset.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
+            <a href="../_sources/tutorials/index.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
           
         
       </li>
@@ -257,47 +255,18 @@
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
              <article itemprop="articleBody" id="pytorch-article" class="pytorch-article">
               
-  <section id="timeseriesdataset">
-<h1>TimeSeriesDataset<a class="headerlink" href="#timeseriesdataset" title="Permalink to this heading">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="torchtime.datasets.TimeSeriesDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchtime.datasets.</span></span><span class="sig-name descname"><span class="pre">TimeSeriesDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.11)"><span class="pre">Callable</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.11)"><span class="pre">Callable</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.11)"><span class="pre">Callable</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torchtime/datasets/timeseries.html#TimeSeriesDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torchtime.datasets.TimeSeriesDataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class for making datasets which are compatible with torchtime.
-It is necessary to override the <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> and <code class="docutils literal notranslate"><span class="pre">__len__</span></code> method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>root</strong> (<em>string</em>) – Root directory of dataset.</p></li>
-<li><p><strong>transforms</strong> (<em>callable</em><em>, </em><em>optional</em>) – A function/transforms that takes in a time series and a label and returns the
-transformed versions of both.</p></li>
-<li><p><strong>transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – A function/transform that  takes in a uni- or multivariate time series and
-returns a transformed version. E.g, <code class="docutils literal notranslate"><span class="pre">transforms.NaN2Value</span></code></p></li>
-<li><p><strong>target_transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – A function/transform that takes in the target and transforms it.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="xref py py-attr docutils literal notranslate"><span class="pre">transforms</span></code> and the combination of <code class="xref py py-attr docutils literal notranslate"><span class="pre">transform</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">target_transform</span></code> are mutually exclusive.</p>
+  <section id="example-gallery">
+<h1>Example gallery<a class="headerlink" href="#example-gallery" title="Permalink to this heading">¶</a></h1>
+<p>Below is a gallery of examples</p>
+<div class="sphx-glr-thumbnails"></div><div class="sphx-glr-footer sphx-glr-footer-gallery docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/315c4c52fb68082a731b192d944e2ede/tutorials_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tutorials_python.zip</span></code></a></p>
 </div>
-<dl class="py method">
-<dt class="sig sig-object py" id="torchtime.datasets.TimeSeriesDataset.__getitem__">
-<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.11)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/torchtime/datasets/timeseries.html#TimeSeriesDataset.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torchtime.datasets.TimeSeriesDataset.__getitem__" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Index</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>(series, target) where target is index of the target class.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)">tuple</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/a5659940aa3f8f568547d47752a43172/tutorials_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">tutorials_jupyter.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 
 
@@ -311,10 +280,10 @@ returns a transformed version. E.g, <code class="docutils literal notranslate"><
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchtime.datasets.PandasDataset.html" class="btn btn-neutral float-right" title="PandasDataset" accesskey="n" rel="next">Next <img src="../_static/images/chevron-right-orange.svg" class="next-page"></a>
+        <a href="../torchtime.html" class="btn btn-neutral float-right" title="torchtime" accesskey="n" rel="next">Next <img src="../_static/images/chevron-right-orange.svg" class="next-page"></a>
       
       
-        <a href="torchtime.datasets.UCR.html" class="btn btn-neutral" title="UCR" accesskey="p" rel="prev"><img src="../_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
+        <a href="../get_started.html" class="btn btn-neutral" title="Get Started" accesskey="p" rel="prev"><img src="../_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
       
     </div>
   
@@ -346,7 +315,7 @@ returns a transformed version. E.g, <code class="docutils literal notranslate"><
           <div class="pytorch-right-menu" id="pytorch-right-menu">
             <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
               <ul>
-<li><a class="reference internal" href="#">TimeSeriesDataset</a></li>
+<li><a class="reference internal" href="#">Example gallery</a></li>
 </ul>
 
             </div>

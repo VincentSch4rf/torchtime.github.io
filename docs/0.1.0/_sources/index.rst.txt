@@ -20,6 +20,14 @@ model implementations and application components.
    :hidden:
 
    installation
+   get_started
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+   :hidden:
+
+   tutorials/index
 
 .. toctree::
    :maxdepth: 1
