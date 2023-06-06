@@ -161,7 +161,7 @@ Let us show some of the training spectrograms, for fun.
 
  .. code-block:: none
 
-    kidney heart kidney unadulterated
+    liver kidney liver tripe
 
 
 
@@ -402,7 +402,7 @@ So, let's get the index of the highest energy:
 
  .. code-block:: none
 
-    Predicted:  tripe unadulterated unadulterated unadulterated
+    Predicted:  kidney unadulterated unadulterated unadulterated
 
 
 
@@ -441,7 +441,7 @@ Let us look at how the network performs on the whole dataset.
 
  .. code-block:: none
 
-    Accuracy of the network on the 30 test sequences: 30 %
+    Accuracy of the network on the 30 test sequences: 26 %
 
 
 
@@ -490,9 +490,9 @@ not perform well:
  .. code-block:: none
 
     Accuracy for class: unadulterated is 66.7 %
-    Accuracy for class: heart is 0.0 %
-    Accuracy for class: kidney is 50.0 %
-    Accuracy for class: liver is 33.3 %
+    Accuracy for class: heart is 33.3 %
+    Accuracy for class: kidney is 33.3 %
+    Accuracy for class: liver is 0.0 %
     Accuracy for class: tripe is 0.0 %
 
 
@@ -561,7 +561,7 @@ is tiny.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.766 seconds)
+   **Total running time of the script:** ( 0 minutes  8.525 seconds)
 
 
 .. _sphx_glr_download_tutorials_classification_tutorial.py:
