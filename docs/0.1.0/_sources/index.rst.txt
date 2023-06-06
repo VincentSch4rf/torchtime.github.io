@@ -27,7 +27,7 @@ model implementations and application components.
    :caption: Tutorials
    :hidden:
 
-   tutorials/index
+   tutorials/classification_tutorial
 
 .. toctree::
    :maxdepth: 1

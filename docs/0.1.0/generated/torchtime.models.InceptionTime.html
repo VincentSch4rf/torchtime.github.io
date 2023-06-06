@@ -119,17 +119,10 @@
         <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           <div class="pytorch-left-menu-search">
             
-
-            
-              
-              
-                <div class="version">
-                  Nightly Build (0.0.1)
-                </div>
-              
-            
-
-            
+    <div class="version">
+      <a href="../../versions.html"><span style="font-size:110%">Nightly Build (0.0.1) &#x25BC</span></a>
+    </div>
+    
 
 
   
@@ -143,7 +136,6 @@
   </form>
 </div>
 
-            
           </div>
 
           
@@ -163,7 +155,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Example gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/classification_tutorial.html">Time Series Classification with InceptionTime</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python API Reference</span></p>
 <ul class="current">
@@ -250,6 +242,8 @@
         <div class="pytorch-content-left">
 
         
+    
+    
           
           <div class="rst-content">
           
@@ -333,6 +327,8 @@ registered hooks while the latter silently ignores them.</p>
 </footer>
 
           </div>
+
+
         </div>
 
         <div class="pytorch-content-right" id="pytorch-content-right">
@@ -377,6 +373,55 @@ registered hooks while the latter silently ignores them.</p>
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <script type="text/javascript">
+    var collapsedSections = ['API Tutorials', 'Tutorials', 'Training Recipes']
+    </script>
+     
+    <script type="text/javascript">
+      $(document).ready(function() {
+	  var downloadNote = $(".sphx-glr-download-link-note.admonition.note");
+	  if (downloadNote.length >= 1) {
+	      var tutorialUrl = $("#tutorial-type").text();
+	      var githubLink = "https://github.com/vincentsch4rf/torchtime/blob/main/examples/"  + tutorialUrl + ".py",
+		  notebookLink = $(".reference.download")[1].href,
+		  notebookDownloadPath = notebookLink.split('_downloads')[1],
+		  colabLink = "https://colab.research.google.com/github/vincentsch4rf/torchtime/blob/gh-pages/main/_downloads" + notebookDownloadPath;
+
+	      $(".pytorch-call-to-action-links a[data-response='Run in Google Colab']").attr("href", colabLink);
+	      $(".pytorch-call-to-action-links a[data-response='View on Github']").attr("href", githubLink);
+	  }
+
+          var overwrite = function(_) {
+              if ($(this).length > 0) {
+                  $(this)[0].href = "https://github.com/vincentsch4rf/torchtime"
+              }
+          }
+          // PC
+          $(".main-menu a:contains('GitHub')").each(overwrite);
+          // Mobile
+          $(".main-menu a:contains('Github')").each(overwrite);
+      });
+
+      
+       $(window).ready(function() {
+           var original = window.sideMenus.bind;
+           var startup = true;
+           window.sideMenus.bind = function() {
+               original();
+               if (startup) {
+                   $("#pytorch-right-menu a.reference.internal").each(function(i) {
+                       if (this.classList.contains("not-expanded")) {
+                           this.nextElementSibling.style.display = "block";
+                           this.classList.remove("not-expanded");
+                           this.classList.add("expanded");
+                       }
+                   });
+                   startup = false;
+               }
+           };
+       });
+    </script>
+
 
   <!-- Begin Mobile Menu -->
 

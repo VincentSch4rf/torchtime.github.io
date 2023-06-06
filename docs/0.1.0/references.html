@@ -120,17 +120,10 @@
         <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           <div class="pytorch-left-menu-search">
             
-
-            
-              
-              
-                <div class="version">
-                  Nightly Build (0.0.1)
-                </div>
-              
-            
-
-            
+    <div class="version">
+      <a href="../versions.html"><span style="font-size:110%">Nightly Build (0.0.1) &#x25BC</span></a>
+    </div>
+    
 
 
   
@@ -144,7 +137,6 @@
   </form>
 </div>
 
-            
           </div>
 
           
@@ -164,7 +156,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Example gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/classification_tutorial.html">Time Series Classification with InceptionTime</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python API Reference</span></p>
 <ul>
@@ -249,6 +241,8 @@
         <div class="pytorch-content-left">
 
         
+    
+    
           
           <div class="rst-content">
           
@@ -261,6 +255,10 @@
 <div class="citation" id="id2" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>DBK+19<span class="fn-bracket">]</span></span>
 <p>Hoang Anh Dau, Anthony Bagnall, Kaveh Kamgar, Chin-Chia Michael Yeh, Yan Zhu, Shaghayegh Gharghabi, Chotirat Ann Ratanamahatana, and Eamonn Keogh. The ucr time series archive. 2019. <a class="reference external" href="https://arxiv.org/abs/1810.07758">arXiv:1810.07758</a>.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>IFLF+20<span class="fn-bracket">]</span></span>
+<p>Hassan Ismail Fawaz, Benjamin Lucas, Germain Forestier, Charlotte Pelletier, Daniel F. Schmidt, Jonathan Weber, Geoffrey I. Webb, Lhassane Idoumghar, Pierre-Alain Muller, and François Petitjean. Inceptiontime: finding alexnet for time series classification. <em>Data Mining and Knowledge Discovery</em>, 34(6):1936–1962, 2020. URL: <a class="reference external" href="https://doi.org/10.1007/s10618-020-00710-y">https://doi.org/10.1007/s10618-020-00710-y</a>, <a class="reference external" href="https://doi.org/10.1007/s10618-020-00710-y">doi:10.1007/s10618-020-00710-y</a>.</p>
 </div>
 </div>
 </div>
@@ -306,6 +304,8 @@
 </footer>
 
           </div>
+
+
         </div>
 
         <div class="pytorch-content-right" id="pytorch-content-right">
@@ -350,6 +350,55 @@
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <script type="text/javascript">
+    var collapsedSections = ['API Tutorials', 'Tutorials', 'Training Recipes']
+    </script>
+     
+    <script type="text/javascript">
+      $(document).ready(function() {
+	  var downloadNote = $(".sphx-glr-download-link-note.admonition.note");
+	  if (downloadNote.length >= 1) {
+	      var tutorialUrl = $("#tutorial-type").text();
+	      var githubLink = "https://github.com/vincentsch4rf/torchtime/blob/main/examples/"  + tutorialUrl + ".py",
+		  notebookLink = $(".reference.download")[1].href,
+		  notebookDownloadPath = notebookLink.split('_downloads')[1],
+		  colabLink = "https://colab.research.google.com/github/vincentsch4rf/torchtime/blob/gh-pages/main/_downloads" + notebookDownloadPath;
+
+	      $(".pytorch-call-to-action-links a[data-response='Run in Google Colab']").attr("href", colabLink);
+	      $(".pytorch-call-to-action-links a[data-response='View on Github']").attr("href", githubLink);
+	  }
+
+          var overwrite = function(_) {
+              if ($(this).length > 0) {
+                  $(this)[0].href = "https://github.com/vincentsch4rf/torchtime"
+              }
+          }
+          // PC
+          $(".main-menu a:contains('GitHub')").each(overwrite);
+          // Mobile
+          $(".main-menu a:contains('Github')").each(overwrite);
+      });
+
+      
+       $(window).ready(function() {
+           var original = window.sideMenus.bind;
+           var startup = true;
+           window.sideMenus.bind = function() {
+               original();
+               if (startup) {
+                   $("#pytorch-right-menu a.reference.internal").each(function(i) {
+                       if (this.classList.contains("not-expanded")) {
+                           this.nextElementSibling.style.display = "block";
+                           this.classList.remove("not-expanded");
+                           this.classList.add("expanded");
+                       }
+                   });
+                   startup = false;
+               }
+           };
+       });
+    </script>
+
 
   <!-- Begin Mobile Menu -->
 
