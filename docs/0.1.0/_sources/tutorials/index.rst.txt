@@ -13,7 +13,30 @@ Below is a gallery of tutorials.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="**Author**: `Vincent Scharf &lt;vincent.scharf@smail.inf.h-brs.de&gt;`__">
+
+.. only:: html
+
+  .. image:: /tutorials/images/thumb/sphx_glr_classification_tutorial_thumb.png
+    :alt: Time Series Classification with InceptionTime
+
+  :ref:`sphx_glr_tutorials_classification_tutorial.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Time Series Classification with InceptionTime</div>
     </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /tutorials/classification_tutorial
 
 
 .. only:: html
