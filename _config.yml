@@ -3,7 +3,7 @@ title: "PyTorch Time Website"
 author: "Vincent Sch4rf"
 default_author: Vincent Sch4rf
 description: "PyTorch-based Time Series Classification Framework"
-latest_version: 0.1.0
+latest_version: 0.0.1
 timezone: Europe/Berlin
 url: "https://www.pytorchtime.com"
 baseurl: ""
