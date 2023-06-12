@@ -108,9 +108,14 @@ We impute those missing values using ``transforms.Nan2Value()``.
 
  .. code-block:: none
 
-    /home/vincent/Nextcloud/MAS/projects/torchtime/torchtime/io/ts.py:459: UserWarning: Meta information for '@dimensions' is missing. Inferring from data.
+    Downloading http://www.timeseriesclassification.com/Downloads/Beef.zip
+    Downloading http://www.timeseriesclassification.com/Downloads/Beef.zip to ./data/UCR/Beef/Beef.zip
+      0%|          | 0/432784 [00:00<?, ?it/s]    433152it [00:00, 4466983.11it/s]          
+    Extracting ./data/UCR/Beef/Beef.zip to ./data/UCR/Beef
+
+    /home/vincent/miniconda3/envs/torchtime/lib/python3.9/site-packages/torchtime-0.0.1+8eabcd0-py3.9.egg/torchtime/io/ts.py:459: UserWarning: Meta information for '@dimensions' is missing. Inferring from data.
       self.parse_body(line)
-    /home/vincent/Nextcloud/MAS/projects/torchtime/torchtime/datasets/ucruea.py:135: DataConversionWarning: Labels are not numeric and no explicit class mapping is provided. Please pass an explicit class mapping to the constructor. Using class labels parsed from dataset.
+    /home/vincent/miniconda3/envs/torchtime/lib/python3.9/site-packages/torchtime-0.0.1+8eabcd0-py3.9.egg/torchtime/datasets/ucruea.py:135: DataConversionWarning: Labels are not numeric and no explicit class mapping is provided. Please pass an explicit class mapping to the constructor. Using class labels parsed from dataset.
       self.data, self.targets, self.classes = self._load_data()
 
 
@@ -161,7 +166,7 @@ Let us show some of the training spectrograms, for fun.
 
  .. code-block:: none
 
-    liver kidney liver tripe
+    unadulterated liver heart tripe
 
 
 
@@ -402,7 +407,7 @@ So, let's get the index of the highest energy:
 
  .. code-block:: none
 
-    Predicted:  kidney unadulterated unadulterated unadulterated
+    Predicted:  heart unadulterated unadulterated unadulterated
 
 
 
@@ -489,11 +494,11 @@ not perform well:
 
  .. code-block:: none
 
-    Accuracy for class: unadulterated is 66.7 %
+    Accuracy for class: unadulterated is 83.3 %
     Accuracy for class: heart is 33.3 %
-    Accuracy for class: kidney is 33.3 %
+    Accuracy for class: kidney is 0.0 %
     Accuracy for class: liver is 0.0 %
-    Accuracy for class: tripe is 0.0 %
+    Accuracy for class: tripe is 16.7 %
 
 
 
@@ -561,7 +566,7 @@ is tiny.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.525 seconds)
+   **Total running time of the script:** ( 0 minutes  8.902 seconds)
 
 
 .. _sphx_glr_download_tutorials_classification_tutorial.py:

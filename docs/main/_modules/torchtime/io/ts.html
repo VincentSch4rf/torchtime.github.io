@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.0.1+8eabcd0) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
     </div>
     
 
@@ -261,7 +261,7 @@
 
 
 <span class="k">class</span> <span class="nc">TsTagValuePattern</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Enumeration holding the known `.ts` file headers tag value types in the form of regex expressions.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">BOOLEAN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(?:tru|fals)e&#39;</span><span class="p">)</span>
@@ -272,7 +272,7 @@
 
 
 <span class="k">class</span> <span class="nc">TsTag</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Enumeration holding the names of the known `.ts` file tag names.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">PROBLEM_NAME</span> <span class="o">=</span> <span class="s1">&#39;problemName&#39;</span>
@@ -286,7 +286,7 @@
 
 
 <div class="viewcode-block" id="TSFileLoader"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader">[docs]</a><span class="k">class</span> <span class="nc">TSFileLoader</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    File loader that can load time series files in sktimes `.ts` file format.</span>
 
 <span class="sd">    Args:</span>
@@ -296,7 +296,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="TSFileLoader.State"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.State">[docs]</a>    <span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        TSFileLoader&#39;s internal parsing state.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">PREFACE</span> <span class="o">=</span> <span class="mi">0</span>
@@ -320,7 +320,7 @@
                                        <span class="n">TsTag</span><span class="o">.</span><span class="n">TIMESTAMPS</span><span class="p">]</span>
 
 <div class="viewcode-block" id="TSFileLoader.as_tensor"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.as_tensor">[docs]</a>    <span class="k">def</span> <span class="nf">as_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">return_targets</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the loaded data as a 3-dimensional tensor of the form (N, C, S).</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the loaded data as a 3-dimensional tensor of the form (N, C, S).</span>
 
 <span class="sd">        Keyword Args:</span>
 <span class="sd">            return_targets (bool):</span>
@@ -338,7 +338,7 @@
         <span class="k">return</span> <span class="n">data_</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.as_dataframe"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.as_dataframe">[docs]</a>    <span class="k">def</span> <span class="nf">as_dataframe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">return_targets</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the loaded data as a pandas dataframe.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the loaded data as a pandas dataframe.</span>
 
 <span class="sd">        Keyword Args:</span>
 <span class="sd">            return_targets (bool): Identifies whether the targets should be included in the returned dataframe. If</span>
@@ -360,7 +360,7 @@
         <span class="k">return</span> <span class="n">data</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.get_classes"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.get_classes">[docs]</a>    <span class="k">def</span> <span class="nf">get_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return the classes found in the &#39;.ts&#39; file</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the classes found in the &#39;.ts&#39; file</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            List[str]: List of class names as string.</span>
@@ -384,7 +384,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">nan_replace_value</span> <span class="o">=</span> <span class="n">nan_replace_value</span>
 
 <div class="viewcode-block" id="TSFileLoader.parse_header"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse_header">[docs]</a>    <span class="k">def</span> <span class="nf">parse_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Parses a line of a `.ts` file header and updates the internal state of the loader with the extracted</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parses a line of a `.ts` file header and updates the internal state of the loader with the extracted</span>
 <span class="sd">        information.</span>
 
 <span class="sd">        Args:</span>
@@ -425,7 +425,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">value_pattern</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.parse_header_value"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse_header_value">[docs]</a>    <span class="k">def</span> <span class="nf">parse_header_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value_type</span><span class="p">:</span> <span class="n">TsTagValuePattern</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-        <span class="sd">&quot;&quot;&quot;Parse a single header value that was extracted by the header line parser and return its value as the</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse a single header value that was extracted by the header line parser and return its value as the</span>
 <span class="sd">        appropriate python object.</span>
 
 <span class="sd">        Args:</span>
@@ -455,7 +455,7 @@
             <span class="k">return</span> <span class="n">value</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.parse_body"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse_body">[docs]</a>    <span class="k">def</span> <span class="nf">parse_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Parse a line of the `@data` content of a `.ts` file if `@timeStamps` is `False`.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse a line of the `@data` content of a `.ts` file if `@timeStamps` is `False`.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            line (str): The `@data` line to parse.</span>
@@ -509,7 +509,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.parse_timestamp_tuple"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse_timestamp_tuple">[docs]</a>    <span class="k">def</span> <span class="nf">parse_timestamp_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tuple_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line_dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Parse a timestamp tuple of the form `(&lt;timestamp&gt;,&lt;float&gt;)`</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse a timestamp tuple of the form `(&lt;timestamp&gt;,&lt;float&gt;)`</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            tuple_data (str): The timestamp tuple as string.</span>
@@ -559,7 +559,7 @@
         <span class="k">return</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">value</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.parse_body_timestamps"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse_body_timestamps">[docs]</a>    <span class="k">def</span> <span class="nf">parse_body_timestamps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Parse a line of the `@data` content of a `.ts` file if `@timeStamps` is `True`.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse a line of the `@data` content of a `.ts` file if `@timeStamps` is `True`.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            line (str): The `@data` line to parse.</span>
@@ -643,7 +643,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">target</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TSFileLoader.verify_metadata"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.verify_metadata">[docs]</a>    <span class="k">def</span> <span class="nf">verify_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Verifies the parsed metadata of a `.ts` file by checking whether a full set of metadata has been provided.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifies the parsed metadata of a `.ts` file by checking whether a full set of metadata has been provided.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
@@ -683,7 +683,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">series_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="n">TsTag</span><span class="o">.</span><span class="n">SERIES_LENGTH</span><span class="p">]</span>
 
 <div class="viewcode-block" id="TSFileLoader.parse"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader.parse">[docs]</a>    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Parses a `.ts` sktime formatted time series file.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parses a `.ts` sktime formatted time series file.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
@@ -710,7 +710,7 @@
 
 
 <span class="k">class</span> <span class="nc">TsTimestampLineState</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Final state machine for handling the line parser state in `.ts` files that have timestamps.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">START_LINE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
@@ -723,7 +723,7 @@
     <span class="n">EMPTY_DIM</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TsTimestampLineState</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Performs a state transition. A state transition can here consist of multiple atomic transitions in order.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs a state transition. A state transition can here consist of multiple atomic transitions in order.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            token (str): The token at the current position.</span>
@@ -784,7 +784,7 @@
         <span class="n">return_class_labels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">replace_missing_vals_with</span><span class="o">=</span><span class="s2">&quot;NaN&quot;</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Load data from a .ts file into a Pandas DataFrame.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load data from a .ts file into a Pandas DataFrame.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>

@@ -121,7 +121,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../versions.html"><span style="font-size:110%">Nightly Build (0.0.1+8eabcd0) &#x25BC</span></a>
+      <a href="../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
     </div>
     
 
@@ -338,9 +338,16 @@ the num_worker of torch.utils.data.DataLoader() to 0.</p>
 <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">classes</span></a> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;unadulterated&#39;</span><span class="p">,</span> <span class="s1">&#39;heart&#39;</span><span class="p">,</span> <span class="s1">&#39;kidney&#39;</span><span class="p">,</span> <span class="s1">&#39;liver&#39;</span><span class="p">,</span> <span class="s1">&#39;tripe&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/vincent/Nextcloud/MAS/projects/torchtime/torchtime/io/ts.py:459: UserWarning: Meta information for &#39;@dimensions&#39; is missing. Inferring from data.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading http://www.timeseriesclassification.com/Downloads/Beef.zip
+Downloading http://www.timeseriesclassification.com/Downloads/Beef.zip to ./data/UCR/Beef/Beef.zip
+
+  0%|          | 0/432784 [00:00&lt;?, ?it/s]
+433152it [00:00, 4466983.11it/s]
+Extracting ./data/UCR/Beef/Beef.zip to ./data/UCR/Beef
+
+/home/vincent/miniconda3/envs/torchtime/lib/python3.9/site-packages/torchtime-0.0.1+8eabcd0-py3.9.egg/torchtime/io/ts.py:459: UserWarning: Meta information for &#39;@dimensions&#39; is missing. Inferring from data.
   self.parse_body(line)
-/home/vincent/Nextcloud/MAS/projects/torchtime/torchtime/datasets/ucruea.py:135: DataConversionWarning: Labels are not numeric and no explicit class mapping is provided. Please pass an explicit class mapping to the constructor. Using class labels parsed from dataset.
+/home/vincent/miniconda3/envs/torchtime/lib/python3.9/site-packages/torchtime-0.0.1+8eabcd0-py3.9.egg/torchtime/datasets/ucruea.py:135: DataConversionWarning: Labels are not numeric and no explicit class mapping is provided. Please pass an explicit class mapping to the constructor. Using class labels parsed from dataset.
   self.data, self.targets, self.classes = self._load_data()
 </pre></div>
 </div>
@@ -348,7 +355,7 @@ the num_worker of torch.utils.data.DataLoader() to 0.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="k">def</span> <span class="nf">seriesshow</span><span class="p">(</span><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sequences</span></a><span class="p">,</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Plot a univariate time series.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Plot a univariate time series.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">series</span><span class="p">,</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label</span></a> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sequences</span></a><span class="p">,</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="p">):</span>
@@ -369,7 +376,7 @@ the num_worker of torch.utils.data.DataLoader() to 0.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">classes</span></a><span class="p">[</span><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="si">:</span><span class="s1">5s</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">batch_size</span></a><span class="p">)))</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_classification_tutorial_001.png" srcset="../_images/sphx_glr_classification_tutorial_001.png" alt="classification tutorial" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>liver kidney liver tripe
+<img src="../_images/sphx_glr_classification_tutorial_001.png" srcset="../_images/sphx_glr_classification_tutorial_001.png" alt="classification tutorial" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>unadulterated liver heart tripe
 </pre></div>
 </div>
 </section>
@@ -419,7 +426,7 @@ network and optimize.</p>
         <span class="c1"># print statistics</span>
         <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">running_loss</span></a> <span class="o">+=</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">loss</span></a><span class="o">.</span><span class="n">item</span><span class="p">()</span>
         <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a> <span class="o">%</span> <span class="mi">2000</span> <span class="o">==</span> <span class="mi">1999</span><span class="p">:</span>  <span class="c1"># print every 2000 mini-batches</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">epoch</span></a> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a> <span class="o">+</span> <span class="mi">1</span><span class="si">:</span><span class="s1">5d</span><span class="si">}</span><span class="s1">] loss: </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">running_loss</span></a> <span class="o">/</span> <span class="mi">2000</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">epoch</span></a><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">:</span><span class="s1">5d</span><span class="si">}</span><span class="s1">] loss: </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">running_loss</span></a><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2000</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
             <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">running_loss</span></a> <span class="o">=</span> <span class="mf">0.0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished Training&#39;</span><span class="p">)</span>
@@ -481,7 +488,7 @@ So, let’s get the index of the highest energy:</p>
                               <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:  kidney unadulterated unadulterated unadulterated
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:  heart unadulterated unadulterated unadulterated
 </pre></div>
 </div>
 <p>The results seem pretty good.</p>
@@ -499,7 +506,7 @@ So, let’s get the index of the highest energy:</p>
         <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">total</span></a> <span class="o">+=</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">correct</span></a> <span class="o">+=</span> <span class="p">(</span><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">predicted</span></a> <span class="o">==</span> <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy of the network on the 30 test sequences: </span><span class="si">{</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">correct</span></a> <span class="o">//</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">total</span></a><span class="si">}</span><span class="s1"> %&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy of the network on the 30 test sequences: </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">correct</span></a><span class="w"> </span><span class="o">//</span><span class="w"> </span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">total</span></a><span class="si">}</span><span class="s1"> %&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy of the network on the 30 test sequences: 26 %
@@ -532,11 +539,11 @@ not perform well:</p>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy for class: </span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">classname</span></a><span class="si">:</span><span class="s1">5s</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">accuracy</span></a><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> %&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy for class: unadulterated is 66.7 %
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy for class: unadulterated is 83.3 %
 Accuracy for class: heart is 33.3 %
-Accuracy for class: kidney is 33.3 %
+Accuracy for class: kidney is 0.0 %
 Accuracy for class: liver is 0.0 %
-Accuracy for class: tripe is 0.0 %
+Accuracy for class: tripe is 16.7 %
 </pre></div>
 </div>
 <p>Okay, so what next?</p>
@@ -571,7 +578,7 @@ to the GPU too:</p>
 </div>
 <p>Why don’t I notice MASSIVE speedup compared to CPU? Because your network
 is tiny.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.525 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.902 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-classification-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/ed66cd162d0b221fd15634182c05694d/classification_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">classification_tutorial.py</span></code></a></p>

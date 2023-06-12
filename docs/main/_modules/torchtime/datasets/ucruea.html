@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.0.1+8eabcd0) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
     </div>
     
 
@@ -265,7 +265,7 @@
 
 
 <div class="viewcode-block" id="UCR"><a class="viewcode-back" href="../../../generated/torchtime.datasets.UCR.html#torchtime.datasets.UCR">[docs]</a><span class="k">class</span> <span class="nc">UCR</span><span class="p">(</span><span class="n">TimeSeriesDataset</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;*UEA &amp; UCR Time Series Classification Repository* :cite:`Dau2019UCR`.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;*UEA &amp; UCR Time Series Classification Repository* :cite:`Dau2019UCR`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        root (str): Root directory of dataset where ``UCR/&lt;dataset_name&gt;`` exist.</span>
@@ -433,7 +433,7 @@
         <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">classes</span>
 
     <span class="k">def</span> <span class="nf">_ensure_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Remove nested data directory, which seems to exist for some UCR/UEA time series datasets&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove nested data directory, which seems to exist for some UCR/UEA time series datasets&quot;&quot;&quot;</span>
 
         <span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
@@ -449,7 +449,7 @@
         <span class="c1"># contents = [f for f in os.listdir(self.data_dir) if os.path.isfile(os.path.join(self.data_dir, f))]</span>
 
     <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Download the UCR/UEA data if it doesn&#39;t exist already.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Download the UCR/UEA data if it doesn&#39;t exist already.&quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_exists</span><span class="p">():</span>
             <span class="k">return</span>
@@ -488,7 +488,7 @@
             <span class="k">break</span>
 
 <div class="viewcode-block" id="UCR.__getitem__"><a class="viewcode-back" href="../../../generated/torchtime.datasets.UCR.html#torchtime.datasets.UCR.__getitem__">[docs]</a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args:</span>
 <span class="sd">            index (int): The index of the sample to return.</span>
 

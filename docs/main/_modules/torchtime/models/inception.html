@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.0.1+8eabcd0) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
     </div>
     
 
@@ -304,7 +304,7 @@
 
 
 <span class="k">class</span> <span class="nc">GAP1d</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Global Adaptive Pooling + Flatten</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Global Adaptive Pooling + Flatten</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -317,7 +317,7 @@
 
 
 <span class="k">class</span> <span class="nc">Inception</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Inception Module</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inception Module</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_inputs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_convolutions</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_filters</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">39</span><span class="p">,</span>
@@ -371,7 +371,7 @@
 
 
 <span class="k">class</span> <span class="nc">ShortCut</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Skip connection</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Skip connection</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_filters</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
@@ -389,7 +389,7 @@
 
 
 <div class="viewcode-block" id="InceptionTime"><a class="viewcode-back" href="../../../generated/torchtime.models.InceptionTime.html#torchtime.models.InceptionTime">[docs]</a><span class="k">class</span> <span class="nc">InceptionTime</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;InceptionTime model definition</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;InceptionTime model definition</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_inputs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">use_residual</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
