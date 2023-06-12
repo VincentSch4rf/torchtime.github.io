@@ -1,0 +1,12 @@
+﻿.. role:: hidden
+    :class: hidden-section
+.. currentmodule:: torchtime.datasets
+
+
+PandasDataset
+=============
+
+.. autoclass:: PandasDataset
+    :members:
+        __getitem__,
+        

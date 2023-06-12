@@ -1,0 +1,12 @@
+﻿.. role:: hidden
+    :class: hidden-section
+.. currentmodule:: torchtime.datasets
+
+
+UCR
+===
+
+.. autoclass:: UCR
+    :members:
+        __getitem__,
+        
