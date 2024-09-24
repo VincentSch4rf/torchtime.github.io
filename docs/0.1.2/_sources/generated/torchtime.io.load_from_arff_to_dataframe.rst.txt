@@ -1,0 +1,9 @@
+﻿.. role:: hidden
+    :class: hidden-section
+.. currentmodule:: torchtime.io
+
+
+load_from_arff_to_dataframe
+===========================
+
+.. autofunction:: load_from_arff_to_dataframe
