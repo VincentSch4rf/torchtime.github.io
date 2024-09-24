@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchtime.io.ts &mdash; Torchtime nightly documentation</title>
+  <title>torchtime.io.ts &mdash; Torchtime 0.1.2 documentation</title>
   
 
   
@@ -41,9 +41,9 @@
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-  <!-- Google Analytics -->
+  <!-- Google Tag Manager -->
   
-  <!-- End Google Analytics -->
+    <!-- End Google Tag Manager -->
   
 
   
@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">0.1.2 &#x25BC</span></a>
     </div>
     
 
@@ -239,6 +239,7 @@
     
     
           
+          
           <div class="rst-content">
           
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -264,10 +265,10 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Enumeration holding the known `.ts` file headers tag value types in the form of regex expressions.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">BOOLEAN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(?:tru|fals)e&#39;</span><span class="p">)</span>
-    <span class="n">ANY_CONNECTED_STRING</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">w+&#39;</span><span class="p">)</span>
-    <span class="n">INTEGER_NUMBER</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">d+&#39;</span><span class="p">)</span>
-    <span class="n">CLASS_LABEL</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(?:tru|fals)e(?:(?&lt;=true)((?: [^\s]+)+)|(?&lt;=false))&#39;</span><span class="p">)</span>
+    <span class="n">BOOLEAN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?:tru|fals)e&quot;</span><span class="p">)</span>
+    <span class="n">ANY_CONNECTED_STRING</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\w+&quot;</span><span class="p">)</span>
+    <span class="n">INTEGER_NUMBER</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">)</span>
+    <span class="n">CLASS_LABEL</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?:tru|fals)e(?:(?&lt;=true)((?: [^\s]+)+)|(?&lt;=false))&quot;</span><span class="p">)</span>
     <span class="c1"># ((?:tru|fals)e)(?(?&lt;=true)((?: \w+)+))(?=\s)</span>
 
 
@@ -275,14 +276,14 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Enumeration holding the names of the known `.ts` file tag names.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">PROBLEM_NAME</span> <span class="o">=</span> <span class="s1">&#39;problemName&#39;</span>
-    <span class="n">TIMESTAMPS</span> <span class="o">=</span> <span class="s1">&#39;timeStamps&#39;</span>
-    <span class="n">MISSING</span> <span class="o">=</span> <span class="s1">&#39;missing&#39;</span>
-    <span class="n">EQUAL_LENGTH</span> <span class="o">=</span> <span class="s1">&#39;equalLength&#39;</span>
-    <span class="n">SERIES_LENGTH</span> <span class="o">=</span> <span class="s1">&#39;seriesLength&#39;</span>
-    <span class="n">CLASS_LABEL</span> <span class="o">=</span> <span class="s1">&#39;classLabel&#39;</span>
-    <span class="n">UNIVARIATE</span> <span class="o">=</span> <span class="s1">&#39;univariate&#39;</span>
-    <span class="n">DIMENSIONS</span> <span class="o">=</span> <span class="s1">&#39;dimensions&#39;</span>
+    <span class="n">PROBLEM_NAME</span> <span class="o">=</span> <span class="s2">&quot;problemName&quot;</span>
+    <span class="n">TIMESTAMPS</span> <span class="o">=</span> <span class="s2">&quot;timeStamps&quot;</span>
+    <span class="n">MISSING</span> <span class="o">=</span> <span class="s2">&quot;missing&quot;</span>
+    <span class="n">EQUAL_LENGTH</span> <span class="o">=</span> <span class="s2">&quot;equalLength&quot;</span>
+    <span class="n">SERIES_LENGTH</span> <span class="o">=</span> <span class="s2">&quot;seriesLength&quot;</span>
+    <span class="n">CLASS_LABEL</span> <span class="o">=</span> <span class="s2">&quot;classLabel&quot;</span>
+    <span class="n">UNIVARIATE</span> <span class="o">=</span> <span class="s2">&quot;univariate&quot;</span>
+    <span class="n">DIMENSIONS</span> <span class="o">=</span> <span class="s2">&quot;dimensions&quot;</span>
 
 
 <div class="viewcode-block" id="TSFileLoader"><a class="viewcode-back" href="../../../generated/torchtime.io.TSFileLoader.html#torchtime.io.TSFileLoader">[docs]</a><span class="k">class</span> <span class="nc">TSFileLoader</span><span class="p">:</span>
@@ -403,7 +404,7 @@
                 <span class="sa">f</span><span class="s2">&quot;Line number </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">line_number</span><span class="si">}</span><span class="s2"> contains an empty tag!&quot;</span>
             <span class="p">)</span>
 
-        <span class="n">tokens</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">token</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
         <span class="n">token_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">token_len</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -438,7 +439,7 @@
 <span class="sd">            List[str]: If the value is of type CLASS_LABEL. Returns a list of space separated string class labels.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">value_type</span> <span class="o">==</span> <span class="n">TsTagValuePattern</span><span class="o">.</span><span class="n">BOOLEAN</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+            <span class="k">return</span> <span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span>
         <span class="k">if</span> <span class="n">value_type</span> <span class="o">==</span> <span class="n">TsTagValuePattern</span><span class="o">.</span><span class="n">ANY_CONNECTED_STRING</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">value_type</span> <span class="o">==</span> <span class="n">TsTagValuePattern</span><span class="o">.</span><span class="n">CLASS_LABEL</span><span class="p">:</span>
@@ -1518,7 +1519,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2023, Vincent Scharf.
+        &copy; Copyright 2024, Vincent Scharf.
 
     </p>
   </div>
@@ -1623,6 +1624,12 @@
        });
     </script>
 
+<!--  <div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../../../_static/images/pytorch-x.svg">
+  </div>
+</div>-->
 
   <!-- Begin Mobile Menu -->
 

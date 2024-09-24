@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchtime.io.arff &mdash; Torchtime nightly documentation</title>
+  <title>torchtime.io.arff &mdash; Torchtime 0.1.2 documentation</title>
   
 
   
@@ -41,9 +41,9 @@
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-  <!-- Google Analytics -->
+  <!-- Google Tag Manager -->
   
-  <!-- End Google Analytics -->
+    <!-- End Google Tag Manager -->
   
 
   
@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">0.1.2 &#x25BC</span></a>
     </div>
     
 
@@ -239,6 +239,7 @@
     
     
           
+          
           <div class="rst-content">
           
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -305,7 +306,7 @@
                         <span class="ow">and</span> <span class="p">(</span><span class="s2">&quot;target&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;classAttribute&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
                 <span class="p">):</span>
                     <span class="n">has_class_labels</span> <span class="o">=</span> <span class="kc">True</span>
-                    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;{([\w,]+)}&quot;</span><span class="p">)</span>
+                    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;{([\w,]+)}&quot;</span><span class="p">)</span>
                     <span class="n">result</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
                     <span class="n">class_labels</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">class_labels</span><span class="p">))</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">class_labels</span><span class="p">):</span>
@@ -391,7 +392,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2023, Vincent Scharf.
+        &copy; Copyright 2024, Vincent Scharf.
 
     </p>
   </div>
@@ -496,6 +497,12 @@
        });
     </script>
 
+<!--  <div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../../../_static/images/pytorch-x.svg">
+  </div>
+</div>-->
 
   <!-- Begin Mobile Menu -->
 

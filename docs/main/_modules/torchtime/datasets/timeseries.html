@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchtime.datasets.timeseries &mdash; Torchtime nightly documentation</title>
+  <title>torchtime.datasets.timeseries &mdash; Torchtime 0.1.2 documentation</title>
   
 
   
@@ -41,9 +41,9 @@
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-  <!-- Google Analytics -->
+  <!-- Google Tag Manager -->
   
-  <!-- End Google Analytics -->
+    <!-- End Google Tag Manager -->
   
 
   
@@ -118,7 +118,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../../../../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
+      <a href="../../../../versions.html"><span style="font-size:110%">0.1.2 &#x25BC</span></a>
     </div>
     
 
@@ -239,6 +239,7 @@
     
     
           
+          
           <div class="rst-content">
           
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -282,7 +283,7 @@
             <span class="n">target_transform</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_log_api_usage_once</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;torchtime.datasets.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">_six</span><span class="o">.</span><span class="n">string_classes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span>
 
@@ -444,7 +445,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2023, Vincent Scharf.
+        &copy; Copyright 2024, Vincent Scharf.
 
     </p>
   </div>
@@ -549,6 +550,12 @@
        });
     </script>
 
+<!--  <div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../../../_static/images/pytorch-x.svg">
+  </div>
+</div>-->
 
   <!-- Begin Mobile Menu -->
 

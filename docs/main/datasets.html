@@ -6,11 +6,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchtime.datasets &mdash; Torchtime nightly documentation</title>
+  <title>torchtime.datasets &mdash; Torchtime 0.1.2 documentation</title>
   
 
   
@@ -44,9 +44,9 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="UCR" href="generated/torchtime.datasets.UCR.html" />
     <link rel="prev" title="load_from_arff_to_dataframe" href="generated/torchtime.io.load_from_arff_to_dataframe.html" />
-  <!-- Google Analytics -->
+  <!-- Google Tag Manager -->
   
-  <!-- End Google Analytics -->
+    <!-- End Google Tag Manager -->
   
 
   
@@ -121,7 +121,7 @@
           <div class="pytorch-left-menu-search">
             
     <div class="version">
-      <a href="../versions.html"><span style="font-size:110%">Nightly Build (0.1.1+3666d22) &#x25BC</span></a>
+      <a href="../versions.html"><span style="font-size:110%">0.1.2 &#x25BC</span></a>
     </div>
     
 
@@ -244,6 +244,7 @@
     
     
           
+          
           <div class="rst-content">
           
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -255,9 +256,9 @@
 module, as well as utility classes for building your own datasets.</p>
 <section id="built-in-datasets">
 <h2>Built-in datasets<a class="headerlink" href="#built-in-datasets" title="Permalink to this heading">¶</a></h2>
-<p>All datasets are subclasses of <a class="reference external" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset" title="(in PyTorch v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code></a>
+<p>All datasets are subclasses of <a class="reference external" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset" title="(in PyTorch v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code></a>
 i.e, they have <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> and <code class="docutils literal notranslate"><span class="pre">__len__</span></code> methods implemented.
-Hence, they can all be passed to a <a class="reference external" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader" title="(in PyTorch v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.DataLoader</span></code></a>
+Hence, they can all be passed to a <a class="reference external" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader" title="(in PyTorch v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.DataLoader</span></code></a>
 which can load multiple samples in parallel using <code class="docutils literal notranslate"><span class="pre">torch.multiprocessing</span></code> workers.
 For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ucr_data</span> <span class="o">=</span> <span class="n">torchtime</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">UCR</span><span class="p">(</span><span class="s1">&#39;path/to/ucr_root/&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AbnormalHeartbeat&#39;</span><span class="p">)</span>
@@ -323,7 +324,7 @@ You can also create your own datasets using the provided <a class="reference int
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2023, Vincent Scharf.
+        &copy; Copyright 2024, Vincent Scharf.
 
     </p>
   </div>
@@ -438,6 +439,12 @@ You can also create your own datasets using the provided <a class="reference int
        });
     </script>
 
+<!--  <div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="_static/images/pytorch-x.svg">
+  </div>
+</div>-->
 
   <!-- Begin Mobile Menu -->
 
